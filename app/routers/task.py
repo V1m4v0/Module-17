@@ -23,7 +23,7 @@ async def task_by_id(db: Annotated[Session, Depends(get_db)], task_id: int):
     if task is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail='User was not found'
+            detail='Task was not found'
         )
     return task
 
